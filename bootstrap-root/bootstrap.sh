@@ -4,7 +4,7 @@ ENV="$1"
 
 function configure() {
   [[ "$ENV" == "" ]] && return
-  doc_env=$([[ "$ENV" == "prod" ]] && echo "cqa" || echo "fqa")
+  doc_env=$([[ "$ENV" == "prod" ]] && echo "cqa" || echo "fqa")  # HACK to shoehorn DOC's consul clusters into this demo
 
   consul-template \
     -consul consul1.${doc_env}.doc.amplifyinsight.net:8500 \

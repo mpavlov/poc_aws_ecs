@@ -9,8 +9,6 @@ RUN curl -L https://github.com/hashicorp/consul-template/releases/download/v0.6.
 # install app
 COPY html /usr/share/nginx/html
 
-# configure app
-COPY consul-template /consul-template
-COPY bootstrap.sh /bootstrap.sh
-
+# configure and run app
+COPY bootstrap-root/ /
 ENTRYPOINT ["/bootstrap.sh"]
