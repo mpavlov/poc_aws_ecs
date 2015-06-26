@@ -2,7 +2,7 @@
 
 function remove_containers() {
   local output=$(docker ps -q | xargs docker rm --force)
-  [[ $? != 0 ]] && echo -e "$output"
+  echo -e "$output"
 }
 
 function fail_with() {
