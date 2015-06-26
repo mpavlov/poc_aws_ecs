@@ -17,7 +17,11 @@ function compose() {
 }
 
 function get_docker_host() {
-  echo $DOCKER_HOST | sed 's|.*://\(.*\):.*|\1|g'
+  if [[ -z $DOCKER_HOST ]]; then
+    echo localhost
+  else
+    echo $DOCKER_HOST | sed 's|.*://\(.*\):.*|\1|g'
+  fi
 }
 
 function run_tests() {
