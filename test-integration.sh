@@ -12,7 +12,7 @@ function fail_with() {
 }
 
 function compose() {
-  docker-compose up -d
+  /usr/local/bin/docker-compose up -d
   [[ $? != 0 ]] && fail_with "Failed to compose"
 }
 
