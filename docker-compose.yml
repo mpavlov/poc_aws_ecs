@@ -1,6 +1,13 @@
 fancyapp:
-  cpu_shares: 10
   image: unchecs/fancyapp:latest
+  cpu_shares: 10
   mem_limit: 536870912b
   ports:
   - 80:80
+fancyapp2:
+  image: unchecs/fancyapp:latest
+  cpu_shares: 20
+  mem_limit: 436870912b
+  ports:
+  - 81:80
+
