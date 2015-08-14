@@ -95,7 +95,7 @@
              "         --resource LaunchConfig ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
 
-             "echo ECS_CLUSTER=", { "Ref": "env" } ,"ci-fancyapp >> /etc/ecs/ecs.config\n",
+             "echo ECS_CLUSTER=", { "Ref": "env" } ,"-fancyapp >> /etc/ecs/ecs.config\n",
 
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },
