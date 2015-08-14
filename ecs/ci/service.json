@@ -1,5 +1,6 @@
 {
     "serviceName": "fancyapp-service",
+    "service": "fancyapp-service",
     "taskDefinition": "fancyapp-task",
     "desiredCount": 1
 }
